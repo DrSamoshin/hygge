@@ -19,16 +19,19 @@ jobs:
       with:
         python-version: "3.12"
 
+    - name: Show repo structure
+      run: |
+        echo "Current path: $(pwd)"
+        ls -la
+
     - name: Install Poetry
       run: |
         pip install poetry
 
     - name: Install dependencies
-      working-directory: ./hygge
       run: |
         poetry install
 
     - name: Run tests
-      working-directory: ./hygge
       run: |
         poetry run pytest
