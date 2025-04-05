@@ -1,5 +1,6 @@
 # Technologies
 * FastAPI // основной framework
+* Poetry // менеджер зависимостей
 * PostgreSQL // DB
 * Redis // кеш
 * SQLAlchemy + Alembic
@@ -9,4 +10,3 @@
 * Google Cloud (Cloud Run) // развертывание
 * Google Secret Manager // безопасность
 * Stackdriver // логироавние
-
