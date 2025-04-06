@@ -8,7 +8,6 @@ from backend_cafe.app.core.configs import settings
 BASE_DIR = Path(__file__).resolve().parent.parent
 contents = os.listdir(BASE_DIR)
 
-
 if __name__ == "__main__":
     try:
         logging.info("Starting FastAPI")
