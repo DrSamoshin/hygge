@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.git/
+.docker/
+docker/
+
+backend_cafe/tests/
+backend_cafe/docs/
+backend_cafe/__pycache__/
+backend_cafe/*.pyc
+backend_cafe/pytest.ini
+backend_cafe/.DS_Store

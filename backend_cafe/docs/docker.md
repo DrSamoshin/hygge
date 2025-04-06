@@ -1,5 +1,6 @@
 # Docker
 ## Build
+hygge/
 `docker build -t backend-cafe:latest -f docker/Dockerfile .`
 ## Run
 `docker run -d -p 8000:8000 backend-cafe:latest`
@@ -21,4 +22,5 @@
 
 # Docker compose
 ## Build and run
+hygge/docker
 docker-compose build && docker-compose up

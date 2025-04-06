@@ -1,7 +1,8 @@
 from pathlib import Path
-from fastapi import FastAPI
-from api.endpoints.health_checks import router as health_router
 
+from fastapi import FastAPI
+
+from backend_cafe.app.api.endpoints.health_checks import router as health_router
 
 BASE_DIR = Path(__file__).resolve().parent
 main_app = FastAPI()

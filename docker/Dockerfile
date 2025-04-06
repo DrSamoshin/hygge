@@ -6,11 +6,19 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install poetry==1.8.4
+
 ENV POETRY_VIRTUALENVS_CREATE=false
-WORKDIR /app
-COPY pyproject.toml poetry.lock* /app/
+
+WORKDIR /hygge
+
+ENV PYTHONPATH="/backend_cafe:."
+
+COPY backend_cafe/pyproject.toml backend_cafe/poetry.lock* /hygge/
+
 RUN poetry install --no-interaction --no-ansi
-COPY . /app
+
+COPY . /hygge
+
 EXPOSE 8000
 
-CMD ["poetry", "run", "python", "app/run.py"]
+CMD ["poetry", "run", "python", "backend_cafe/app/run.py"]
