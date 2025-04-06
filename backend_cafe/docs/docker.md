@@ -18,3 +18,7 @@
 * `docker images`                          # Список всех образов 
 * `docker build -t <имя>:<тег> .`         # Собрать образ из Dockerfile 
 * `docker rmi <image_id|name>`            # Удалить образ
+
+# Docker compose
+## Build and run
+docker-compose build && docker-compose up

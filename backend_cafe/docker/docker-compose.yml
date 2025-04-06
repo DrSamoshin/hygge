@@ -20,7 +20,6 @@ services:
     depends_on:
       - db
 
-  # Контейнер с PostgreSQL (или другой СУБД)
   db:
     image: postgres:15
     container_name: postgres_db
@@ -33,6 +32,18 @@ services:
       - "5432:5432"
     volumes:
       - db-data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+    restart: always
 
 volumes:
   db-data:
